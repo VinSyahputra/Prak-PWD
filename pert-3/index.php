@@ -10,6 +10,7 @@ $result = mysqli_query($con, "SELECT * FROM mahasiswa ");
 </head>
 <body>
 <a href="tambah.php">Tambah Data Baru</a><br/><br/>
+<a href="lap_mhs.php"><button>CETAK</button></a>
  <table width='80%' border=1>
  <tr>
  <th>Nim</th> <th>Nama</th> <th>Gender</th> <th>Alamat</th> 
