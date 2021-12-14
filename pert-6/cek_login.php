@@ -10,12 +10,22 @@ $login=mysqli_query($con,$sql);
 $ketemu=mysqli_num_rows($login);
 $r= mysqli_fetch_array($login);
 if ($ketemu > 0){
- $_SESSION['iduser'] = $r['id_user'];
- $_SESSION['passuser'] = $r['password'];
-echo"USER BERHASIL LOGIN<br>";
-echo "id user =",$_SESSION['iduser'],"<br>";
-echo "password=",$_SESSION['passuser'],"<br>";
-echo "<a href=logout.php><b>LOGOUT</b></a></center>";
+ 	$_SESSION['iduser'] = $r['id_user'];
+ 	$_SESSION['passuser'] = $r['password'];
+	echo"USER BERHASIL LOGIN<br><br>";
+
+	if($r['level'] == 2){
+		echo "SELAMAT DATANG ADMIN ". strtoupper($r['nama']). "<br>";
+		echo "id user =",$_SESSION['iduser'],"<br>";
+		echo "password=",$_SESSION['passuser'],"<br>";
+		echo "<a href=logout.php><b>LOGOUT</b></a></center>";
+	}else{
+		echo "SELAMAT DATANG USER ". strtoupper($r['nama']);
+		echo "id user =",$_SESSION['iduser'],"<br>";
+		echo "password=",$_SESSION['passuser'],"<br>";
+		echo "<a href=logout.php><b>LOGOUT</b></a></center>";
+	}
+
 }
 else{
  echo "<center>Login gagal! username & password tidak benar<br>";
