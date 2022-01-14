@@ -1,5 +1,5 @@
 <?php
-$url = "http://localhost/prak-PWD/getdatamhs.php";
+$url = "http://localhost/prak-PWD/pert-10/getdatamhs.php";
 $client = curl_init($url);
 curl_setopt($client, CURLOPT_RETURNTRANSFER, 1);
 $response = curl_exec($client);
