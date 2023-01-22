@@ -1,0 +1,3 @@
+CATATAN....
+
+PERT-6 Error imgcreatetruecolor => pada XAMPP pilih apache config kemudian buka php.ini, selanjutnya cari "gd" lalu enable / hapus tanda ;

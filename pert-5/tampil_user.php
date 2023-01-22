@@ -3,8 +3,7 @@
 <input type=submit value='Tambah User'>
 </form>
 <table>
-<tr><th>No</th><th>Username</th><th>NamaLengkap</th><th>Email</th><th>Aksi</th
-></tr>
+<tr><th>No</th><th>Username</th><th>NamaLengkap</th><th>Email</th><th>Aksi</th></tr>
 <?php
 include "koneksi.php";
 $sql="select * from users order by id_user";
